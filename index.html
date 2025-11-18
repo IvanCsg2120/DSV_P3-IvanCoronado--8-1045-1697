@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Panamá - Venta de Boletos</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Eventos Panamá</h1>
+            <h2>Venta de Boletos - Concierto Estadio Roberto Durán</h2>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h3>Registro de Venta</h3>
+                <form id="ventaForm">
+                    <div class="form-group">
+                        <label for="cliente">Nombre del Cliente:</label>
+                        <input type="text" id="cliente" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoria">Categoría de Boletos:</label>
+                        <select id="categoria" required>
+                            <option value="">Seleccione una categoría</option>
+                            <option value="vip">Puestos VIP - $50.00</option>
+                            <option value="butacas">Puestos Butacas - $30.00</option>
+                            <option value="generales">Puestos Generales - $15.00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad de Boletos:</label>
+                        <input type="number" id="cantidad" min="1" required>
+                    </div>
+
+                    <button type="submit" id="btnAgregar">Agregar Venta</button>
+                </form>
+            </section>
+
+            <section class="resumen-section">
+                <h3>Resumen de Ventas</h3>
+                <div class="resumen-container">
+                    <div class="resumen-categoria">
+                        <h4>VIP ($50.00)</h4>
+                        <p>Cantidad: <span id="cantidadVip">0</span></p>
+                        <p>Total: $<span id="totalVip">0.00</span></p>
+                    </div>
+                    <div class="resumen-categoria">
+                        <h4>Butacas ($30.00)</h4>
+                        <p>Cantidad: <span id="cantidadButacas">0</span></p>
+                        <p>Total: $<span id="totalButacas">0.00</span></p>
+                    </div>
+                    <div class="resumen-categoria">
+                        <h4>Generales ($15.00)</h4>
+                        <p>Cantidad: <span id="cantidadGenerales">0</span></p>
+                        <p>Total: $<span id="totalGenerales">0.00</span></p>
+                    </div>
+                </div>
+                <div class="resumen-total">
+                    <h4>Total General</h4>
+                    <p>Total Boletos: <span id="totalBoletos">0</span></p>
+                    <p>Total Ventas: $<span id="totalVentas">0.00</span></p>
+                </div>
+            </section>
+
+            <section class="historial-section">
+                <h3>Historial de Ventas</h3>
+                <table id="tablaVentas">
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Categoría</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas se agregarán dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desarrollo de Software V (8400) - Universidad Tecnológica de Panamá</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
